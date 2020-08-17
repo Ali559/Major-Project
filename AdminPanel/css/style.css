@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/christopher-burns-8KfCR12oeUM-unsplash.jpg") no-repeat center
+      center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  margin-top: 100px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+nav {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-family: "Noto Sans", sans-serif;
+  height: 78px;
+  padding: 0 5%;
+  background: linear-gradient(rgba(33, 33, 33, 0.8) rgba(33, 33, 33, 0.8));
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 10px 10px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+nav .logo {
+  float: left;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  color: #ffffff;
+}
+nav .logo strong {
+  font-weight: 800;
+}
+
+div .ln {
+  height: 80%;
+  flex-basis: 1px;
+  background-color: lightgray;
+}
+
+nav .links {
+  width: 60%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .links li {
+  list-style: none;
+}
+
+nav .links a {
+  display: flex;
+  padding: 1em;
+  margin: 0;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  text-align: center;
+}
+.links .image-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.image-container img {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  flex-wrap: nowrap;
+  margin: 0 0 0 70%;
+}
+.links .image-container .person i {
+  margin: 0 0 0 100%;
+  color: #fff;
+}
+
+#nav-toggle {
+  position: absolute;
+}
+nav .icon-burger {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav .icon-burger .line {
+  width: 30px;
+  height: 3px;
+  background-color: #f7f7f7;
+  margin: 5px;
+  border-radius: 3px;
+}
+#nav-toggle {
+  display: none;
+}
+@media (max-width: 992px) {
+  nav .logo {
+    width: auto;
+    float: none;
+    justify-content: center;
+  }
+  nav .links .image-container {
+    display: none;
+  }
+
+  nav .links .ln {
+    display: none;
+  }
+  nav .links {
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 76px;
+    bottom: 100%;
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  nav .links li a {
+    font-size: 22px;
+  }
+  #nav-toggle:checked ~ .links {
+    bottom: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  #nav-toggle:not(:checked) ~ .links {
+    bottom: 100%;
+    transition: all 0.5s ease-in-out;
+  }
+  nav .icon-burger {
+    display: block;
+  }
+}
+
+@media (max-width: 1521px) {
+  nav .links a {
+    font-size: 16px;
+  }
+}
