@@ -5,7 +5,6 @@
 }
 
 body {
-  overflow: hidden;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../images/christopher-burns-8KfCR12oeUM-unsplash.jpg") no-repeat center
       center fixed;
@@ -47,7 +46,6 @@ nav .logo {
 nav .logo strong {
   font-weight: 800;
 }
-
 div .ln {
   height: 80%;
   flex-basis: 1px;
@@ -62,6 +60,7 @@ nav .links {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  cursor: pointer;
 }
 nav .links li {
   list-style: none;
@@ -114,7 +113,7 @@ nav .icon-burger .line {
 }
 .posts {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   flex-direction: row;
 }
 
@@ -127,6 +126,8 @@ nav .icon-burger .line {
   display: flex;
   justify-content: space-around;
   border-color: #212121;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .card-header {
   background: #212121;
@@ -153,14 +154,56 @@ nav .icon-burger .line {
   display: flex;
   align-items: center;
   flex-direction: row;
+  justify-content: space-around;
+}
+.card-footer .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-footer .edit-button {
+  flex-wrap: nowrap;
+  background-color: green;
+
+  color: #eeeeee;
+}
+.edit-button:hover {
+  background-color: #212121;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.card-footer .delete-button {
+  flex-wrap: nowrap;
+  background-color: maroon;
+
+  color: #eeeeee;
+}
+.card-footer .delete-button:hover {
+  background-color: rgba(33, 33, 33, 0.9);
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
 }
 .card-footer img {
   flex-basis: 40px;
   height: 30px;
 }
+.card-footer span {
+  margin-right: 25%;
+  color: #717070;
+}
+.card-footer .co-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+.card-footer .date {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  font-weight: 200;
+}
 .card-footer button {
   width: 100px;
-  border: 1px solid gray;
+  font-size: 18px;
+  border: none;
   height: 35px;
 }
 .card:hover {
