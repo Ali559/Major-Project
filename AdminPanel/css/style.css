@@ -3,9 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
+
+body {
   overflow: hidden;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../images/christopher-burns-8KfCR12oeUM-unsplash.jpg") no-repeat center
       center fixed;
   -webkit-background-size: cover;
@@ -16,7 +17,7 @@ html {
 
 .container {
   margin-top: 100px;
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -80,19 +81,17 @@ nav .links a {
   justify-content: space-around;
   align-items: center;
 }
-.image-container img {
-  display: flex;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  flex-wrap: nowrap;
-  margin: 0 0 0 70%;
-}
-.links .image-container .person i {
-  margin: 0 0 0 100%;
+.links .image-container span {
+  margin: 0 0 0 20%;
   color: #fff;
+  font-size: 18px;
 }
 
+.links .image-container i {
+  margin: 0 0 0 20%;
+  color: #fff;
+  font-size: 16px;
+}
 #nav-toggle {
   position: absolute;
 }
@@ -113,16 +112,84 @@ nav .icon-burger .line {
 #nav-toggle {
   display: none;
 }
+.posts {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.card {
+  background-color: #eeeeee;
+  top: 20px;
+  max-width: 40%;
+  max-height: 40%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  border-color: #212121;
+}
+.card-header {
+  background: #212121;
+  border-radius: 10px;
+  color: #f7f7f7;
+  font-size: 18px;
+}
+.card-body .card-text {
+  max-width: 100%;
+  max-height: 90%;
+  text-align: center;
+  line-height: 40px;
+  color: #212121;
+  font-size: 14px;
+  background-color: #ebebeb;
+  box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.25);
+}
+.card-body {
+  min-height: fit-content;
+  flex-direction: row;
+}
+.card-footer {
+  color: #717070;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.card-footer img {
+  flex-basis: 40px;
+  height: 30px;
+}
+.card-footer button {
+  width: 100px;
+  border: 1px solid gray;
+  height: 35px;
+}
+.card:hover {
+  box-shadow: 0px 10px 40px 5px rgba(0, 0, 0, 0.25);
+  transition: all 0.5s ease-in-out;
+}
+.card:not(:hover) {
+  box-shadow: none;
+  transition: all 0.5s ease-in-out;
+}
+
 @media (max-width: 992px) {
+  .posts {
+    flex-direction: column;
+  }
+  .card {
+    max-width: 100%;
+  }
   nav .logo {
     width: auto;
     float: none;
     justify-content: center;
   }
-  nav .links .image-container {
+  nav .links .image-container img {
     display: none;
   }
-
+  nav .links .image-container i {
+    display: block;
+  }
   nav .links .ln {
     display: none;
   }
@@ -143,10 +210,12 @@ nav .icon-burger .line {
     font-size: 22px;
   }
   #nav-toggle:checked ~ .links {
+    opacity: 1;
     bottom: 0;
     transition: all 0.5s ease-in-out;
   }
   #nav-toggle:not(:checked) ~ .links {
+    opacity: 0;
     bottom: 100%;
     transition: all 0.5s ease-in-out;
   }
