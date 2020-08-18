@@ -1557,13 +1557,22 @@ button.bg-light:hover {
 @font-face {
   font-family: Roboto;
   font-weight: 400;
-  src: local(Roboto Regular), url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap);
-  }
+  src: local(Roboto Regular),
+    url(
+      https://fonts.googleapis.com/css2?family=Roboto:ital,
+      wght@1,
+      300&display=swap
+    );
+}
 @font-face {
   font-family: Roboto;
   font-weight: 500;
-  src: url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300;1,400&display=swap);
-  
+  src: url(
+    https://fonts.googleapis.com/css2?family=Roboto:ital,
+    wght@1,
+    300;1,
+    400&display=swap
+  );
 }
 @font-face {
   font-family: Roboto;
@@ -12452,3 +12461,4 @@ footer.page-footer h2 {
 .orange-text-2 {
   color: #ffa726 !important;
 }
+
