@@ -109,28 +109,6 @@ nav .icon-burger .line {
 #nav-toggle {
   display: none;
 }
-
-/* .card {
-  border: 1px solid #212121;
-  max-width: 100%;
-  height: auto;
-}
-.card-header {
-  background-color: #212121;
-  color: #f7f7f7;
-  font-weight: 400;
-  font-size: 20px;
-}
-.card-body {
-  background-color: #e4e4e4;
-  margin: 1%;
-  padding: 1%;
-  box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.1);
-}
-.card-title {
-  border: 1px solid #212121;
-} */
-
 @media (max-width: 992px) {
   nav .logo {
     width: auto;
@@ -162,6 +140,7 @@ nav .icon-burger .line {
   nav .links li a {
     font-size: 22px;
   }
+
   #nav-toggle:checked ~ .links {
     opacity: 1;
     bottom: 0;
@@ -169,6 +148,7 @@ nav .icon-burger .line {
   }
   #nav-toggle:not(:checked) ~ .links {
     opacity: 0;
+    right: 100%;
     bottom: 100%;
     transition: all 0.5s ease-in-out;
   }
